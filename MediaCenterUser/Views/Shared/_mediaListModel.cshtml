@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model MediaCenterCore.ViewModels.MediaListVM 
+<style>
+    .mediaModel {
+        color: #428BCA;
+        text-decoration: none;
+    }
+
+    .mediaModel:hover, .mediaModel:focus {
+        color: #2A6496;
+        text-decoration: underline;
+    }
+</style>
+<a class="mediaModel text-primary" asp-controller="media" asp-action="ViewMedia" asp-route-id="@Model.Id">
+    <div class="card-header h6"> @Model.Name</div>
+    <div class="card-body">
+        <img style="max-width: 16rem;" src="@Model.Image" />
+    </div>
+    <div class="text-black">Actors: @Model.Actors</div>
+</a>
+

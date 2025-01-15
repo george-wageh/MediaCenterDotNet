@@ -1,0 +1,20 @@
+﻿<div class="border rounded-2 border-1 border-secondary p-2 m-2">
+    <form class="d-flex" id="searchForm" onsubmit="appendQueryString(event)" method="get" asp-controller="Media">
+        <input class="form-control me-sm-2" type="search" name="q" placeholder="Search" spellcheck="false" data-ms-editor="true">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</div>
+
+<script>
+    function appendQueryString(event) {
+        event.preventDefault(); // Prevent the default form submission
+        const form = document.getElementById('searchForm');
+        const searchValue = form.querySelector('input[name="q"]').value;
+        if (searchValue) {
+            const url = new URL(document.URL);
+            console.log(url.toString());
+            url.searchParams.set('q', searchValue); // Append 'q' to the query string
+            window.location.href = url.toString(); // Redirect to the updated URL
+        }
+    }
+</script>

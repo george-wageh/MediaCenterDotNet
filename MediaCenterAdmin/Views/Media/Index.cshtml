@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model ICollection<MediaCenterCore.ViewModels.MediaListVM>
+<style>
+    .MediaCard:hover {
+        box-shadow: 6px 10px 5px 3px #e6dbdb;
+    }
+
+    .MediaCard {
+        cursor: pointer
+    }
+</style>
+<div>
+    @{
+        await Html.RenderPartialAsync("_searchBar");
+    }
+
+    <div class="modal fade" id="mediaDetailsModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirm delete</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="mediaDetails">
+                    <!-- Partial view content will be loaded here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <div class="row">
+        <div class="col-1 mx-2" style="width:fit-content;">
+            <a class="d-block" asp-controller="media" asp-route-categoryId="" asp-action="index">All</a>
+
+            @foreach (var item in (IEnumerable<MediaCenterCore.ViewModels.CategoryVM>)(ViewData["Categories"] ?? new List<object>()))
+            {
+                <a class="mx-2 my-2 d-block" asp-controller="media" asp-route-categoryId="@item.Id" asp-action="index">@item.Name</a>
+
+            }
+        </div>
+        <div class="col-10" >
+            <div class="row text-center justify-content-center">
+                @foreach (MediaListVM media in Model)
+                {
+                    <div class="col-sm-6 col-lg-4 card text-dark border-2 m-2 p-2 MediaCard" style="max-width: 20rem;">
+                        @{
+                            await Html.RenderPartialAsync("_mediaListModel", media);
+                        }
+                        <div class="row h-100 align-content-end p-3">
+                            <a asp-controller="media" asp-action="details" asp-route-id="@media.Id" class="btn btn-success mt-2">Details</a>
+                            <a asp-action="AddMediaVa" type="submit" asp-route-id="@media.Id" class="btn btn-warning mt-2">Add Media video / audio</a>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+        
+        @section scripts {
+
+            <script>
+                $('.removeMediaBtn').click(function () {
+                    var id = $(this).val();
+                    $('#mediaDetails').load('Media/Remove?id=' + id, function () {
+                        $('#mediaDetailsModel').modal('show');
+                    });
+                });
+            </script>
+
+
+        }
+
+    </div>
+</div>

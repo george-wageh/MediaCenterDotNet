@@ -1,0 +1,59 @@
+﻿@if (User.IsInRole("admin"))
+{
+    <div class="row text-center mt-4 mb-4">
+        <div class="col d-flex justify-content-center flex-wrap gap-3">
+            <a class="btn btn-lg text-white square-btn" asp-controller="Media" asp-action="">All Medias</a>
+            <a class="btn btn-lg text-white square-btn" asp-controller="media" asp-action="add">Add Media</a>
+            <a class="btn btn-lg text-white square-btn" asp-controller="category" asp-action="index">Manage Categories</a>
+            <a class="btn btn-lg text-white square-btn" asp-controller="admin" asp-action="admins">Manage Admins</a>
+            @if (User.IsInRole("owner"))
+            {
+                <a class="btn btn-lg text-white square-btn" asp-controller="role" asp-action="index">Manage Roles</a>
+            }
+        </div>
+    </div>
+}
+
+<style>
+    .square-btn {
+        width: 150px; /* Fixed width for square */
+        height: 150px; /* Fixed height for square */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px; /* Rounded corners */
+        font-size: 1.25rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+        .square-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Add random background colors using CSS classes */
+        .square-btn:nth-child(1) {
+            background-color: #007bff;
+        }
+        /* Blue */
+        .square-btn:nth-child(2) {
+            background-color: #28a745;
+        }
+        /* Green */
+        .square-btn:nth-child(3) {
+            background-color: #ffc107;
+        }
+        /* Yellow */
+        .square-btn:nth-child(4) {
+            background-color: #dc3545;
+        }
+        /* Yellow */
+        .square-btn:nth-child(5) {
+            background-color: #8a3feb;
+        }
+    /* Red */
+
+</style>

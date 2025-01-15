@@ -1,0 +1,12 @@
+﻿@model UploadMediaVaVM
+<div class="mt-4">
+    <h4>Add media video audio </h4>
+    <hr />
+    <form action="@Model.Url" method="post" enctype="multipart/form-data">
+        <input type="text" hidden asp-for="Token">
+        <input type="text" hidden asp-for="MediaId">
+        <input type="file" id="fileInput" asp-for="MediaVa" class="form-control-file">
+        <input type="submit" value="Submit" />
+    </form>
+
+</div>

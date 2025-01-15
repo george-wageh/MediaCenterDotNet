@@ -1,0 +1,91 @@
+﻿@model MediaCenterCore.ViewModels.MediaVM
+
+@{
+    ViewData["Title"] = "Add new media";
+}
+<div class="mt-4">
+    <h4>Add new media</h4>
+    <hr />
+    <form method="post" asp-action="edit" enctype="multipart/form-data">
+        <input hidden asp-for="Id"/>
+        <input hidden asp-for="Image"/>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="row">
+
+            <div class="col">
+                @await Html.PartialAsync("_MediaPhotoBlock" , (MediaVM)Model)
+            </div>
+
+            <div class="col">
+                @await Html.PartialAsync("_MediaDetailsBlock" ,(MediaVM) Model)
+                <div class="form-group mb-2">
+                    <input type="submit" value="Save" class="form-control btn btn-primary" />
+                </div>
+            </div>
+
+            <script>
+                @if (Model.Image != null && Model.Image != "" && Model.Image != "\\media-images\\/no-image.png")
+                {
+                    <text>
+                        let imageEle = document.getElementById("previewImage");
+                        console.log("@Url.Content(Model.Image)");
+                        imageEle.src = "@Url.Content(Model.Image)";
+                        document.getElementById('remove_photo_btn').style.display = "inline-block";
+                        document.getElementById('photoFlag').value = "1";
+
+                    </text>    
+                
+                }
+                @if (Model.Actors?.Count() >= 0)
+                {
+                    @foreach (string actor in Model.Actors)
+                    {
+                        <text>
+                            ActorsList.push("@actor");
+                        </text>
+                    }
+                    <text>
+                        ReloadActors();
+                    </text>
+
+                }
+                @if (Model.Directors?.Count() >= 0)
+                {
+                    @foreach (string director in Model.Directors)
+                    {
+                        <text>
+                            DirectorsList.push("@director");
+                        </text>
+                    }
+                    <text>
+                        ReloadDirectors();
+                    </text>
+
+                }
+                @if (Model.Categories?.Count() >= 0)
+                {
+                    @foreach (var category in Model.Categories)
+                    {
+                        <text>
+                            CategoriesList.push({ id: "@category.Id", CategoryName: "@category.Name" });
+                        </text>
+                    }
+                    <text>
+                        reloadCategories();
+                    </text>
+                }
+
+            </script>
+        </div>
+    </form>
+
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

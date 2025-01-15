@@ -1,0 +1,385 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\MediaCenterStatic.bundle.scp.css",
+      "PackagePath": "staticwebassets\\MediaCenterStatic.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-images\\4zz34uyi.bym.jpg",
+      "PackagePath": "staticwebassets\\media-images\\4zz34uyi.bym.jpg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-images\\kekdgz13.bt3.jpg",
+      "PackagePath": "staticwebassets\\media-images\\kekdgz13.bt3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-images\\no-image.png",
+      "PackagePath": "staticwebassets\\media-images\\no-image.png"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-images\\oljm555i.0qi.jpg",
+      "PackagePath": "staticwebassets\\media-images\\oljm555i.0qi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-images\\rtzuucsb.kha.jpg",
+      "PackagePath": "staticwebassets\\media-images\\rtzuucsb.kha.jpg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\1hj3gdfs.ykl.psd",
+      "PackagePath": "staticwebassets\\media-va\\1hj3gdfs.ykl.psd"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\2kagq0bu.dhu.jpg",
+      "PackagePath": "staticwebassets\\media-va\\2kagq0bu.dhu.jpg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\2z4sgwgz.20u.jpg",
+      "PackagePath": "staticwebassets\\media-va\\2z4sgwgz.20u.jpg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\3tlzkwqq.jwk.jpg",
+      "PackagePath": "staticwebassets\\media-va\\3tlzkwqq.jwk.jpg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\5fc4vjuz.2wy.jpg",
+      "PackagePath": "staticwebassets\\media-va\\5fc4vjuz.2wy.jpg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\5yfqxct3.pku.mp4",
+      "PackagePath": "staticwebassets\\media-va\\5yfqxct3.pku.mp4"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\Untitled video - Made with Clipchamp (6).mp4",
+      "PackagePath": "staticwebassets\\media-va\\Untitled video - Made with Clipchamp (6).mp4"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\a53kbwtc.kzq.mp4",
+      "PackagePath": "staticwebassets\\media-va\\a53kbwtc.kzq.mp4"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\ao0vs05f.e4r.jpg",
+      "PackagePath": "staticwebassets\\media-va\\ao0vs05f.e4r.jpg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\cu053btx.fuh.jpg",
+      "PackagePath": "staticwebassets\\media-va\\cu053btx.fuh.jpg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\hy4vgf1t.s2p.mp4",
+      "PackagePath": "staticwebassets\\media-va\\hy4vgf1t.s2p.mp4"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\i3bq23rb.egk.jpg",
+      "PackagePath": "staticwebassets\\media-va\\i3bq23rb.egk.jpg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\isxfudft.dzw.jpg",
+      "PackagePath": "staticwebassets\\media-va\\isxfudft.dzw.jpg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\iughjr51.it2.jpg",
+      "PackagePath": "staticwebassets\\media-va\\iughjr51.it2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\mptbe31f.5r0.jpg",
+      "PackagePath": "staticwebassets\\media-va\\mptbe31f.5r0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\oiuzh4jw.tma.jpg",
+      "PackagePath": "staticwebassets\\media-va\\oiuzh4jw.tma.jpg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\oqwtatq5.3jj.mp4",
+      "PackagePath": "staticwebassets\\media-va\\oqwtatq5.3jj.mp4"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\tli3vykj.q5u.jpg",
+      "PackagePath": "staticwebassets\\media-va\\tli3vykj.q5u.jpg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\tn2x523z.bog.mp4",
+      "PackagePath": "staticwebassets\\media-va\\tn2x523z.bog.mp4"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\tvnlvpy5.pup.jpg",
+      "PackagePath": "staticwebassets\\media-va\\tvnlvpy5.pup.jpg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\vog1rqic.ucq.jpg",
+      "PackagePath": "staticwebassets\\media-va\\vog1rqic.ucq.jpg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\xlhdkmmp.rdq.mp4",
+      "PackagePath": "staticwebassets\\media-va\\xlhdkmmp.rdq.mp4"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\z1tlluka.kmo.jpg",
+      "PackagePath": "staticwebassets\\media-va\\z1tlluka.kmo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\zbd34por.343.jpg",
+      "PackagePath": "staticwebassets\\media-va\\zbd34por.343.jpg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MediaCenter\\MediaCenterStatic\\wwwroot\\media-va\\zf4amqti.cyg.psd",
+      "PackagePath": "staticwebassets\\media-va\\zf4amqti.cyg.psd"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.MediaCenterStatic.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.MediaCenterStatic.props",
+      "PackagePath": "build\\MediaCenterStatic.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.MediaCenterStatic.props",
+      "PackagePath": "buildMultiTargeting\\MediaCenterStatic.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.MediaCenterStatic.props",
+      "PackagePath": "buildTransitive\\MediaCenterStatic.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,51 @@
+﻿@model MediaCenterCore.ViewModels.MediaVM
+
+@{
+    ViewData["Title"] = "Add new media";
+    string DefaultImage = "https://m.media-amazon.com/images/I/51DSmbniedL._AC_UL320_.jpg";
+}
+<div class="mt-4">
+    <h4>Add new media</h4>
+    <hr />
+    <form method="post" asp-action="Add" enctype="multipart/form-data">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="row">
+            <div class="col">
+                @await Html.PartialAsync("_MediaPhotoBlock" , Model)
+            </div>
+
+            <div class="col">
+                @await Html.PartialAsync("_MediaDetailsBlock" ,Model)
+            </div>
+            <div class="form-group mb-2">
+                <input type="submit" value="Create" class="form-control btn btn-primary" />
+            </div>
+        </div>
+        @if (ViewData["CategoryId"] != null)
+        {
+            <script type="text/javascript">
+                let selectOfCategory = document.getElementById("selectOfCategory");
+                for (var i = 0; i < selectOfCategory.options.length; i++) {
+                    if (selectOfCategory.options[i].value === "@ViewData["CategoryId"].ToString()") {
+                        CategoriesList.push({
+                            id: selectOfCategory.options[i].value,
+                            CategoryName: selectOfCategory.options[i].text
+                        });
+                        break;
+                    }
+                }
+                reloadCategories();
+            </script>
+        }
+    </form>
+
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,211 @@
+﻿@model MediaCenterCore.ViewModels.MediaDetailsVM
+
+@{
+    ViewData["Title"] = Model.Name;
+}
+<div class="mt-4">
+    <h4>@Model.Name</h4>
+    <hr />
+    <div class="row">
+        <div class="col-xl-3 col-sm-6 col-12 text-center">
+            <img style="width:250px" class="m-3" src="@Model.Image" />
+
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12 border border-2 rounded border-light">
+
+            <div class="row" align="center">
+                @if (Model.IsWatchLater == false)
+                {
+                    <form asp-controller="User" asp-action="AddWatchLater">
+                        <button name="mediaId" value="@Model.Id" class="col btn btn-outline-primary m-2">Add to Watch later</button>
+                    </form>
+                }
+                else
+                {
+                    <form asp-controller="User" asp-action="RemoveWatchLater">
+                        <button name="mediaId" value="@Model.Id" class="col btn btn-outline-danger m-2">Remove from Watch later</button>
+                    </form>
+                }
+                @if (Model.IsFav == false)
+                {
+                    <form asp-controller="User" asp-action="AddFav">
+                        <button name="mediaId" value="@Model.Id" class="col btn btn-outline-primary m-2">Add to favorites</button>
+                    </form>
+                }
+                else
+                {
+                    <form asp-controller="User" asp-action="RemoveFav">
+                        <button name="mediaId" value="@Model.Id" class="col btn btn-outline-danger m-2">Remove from favorites</button>
+                    </form>
+                }
+            </div>
+
+            <div class="mt-4">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <row>
+                    <div class="col mb-2">
+                        <img src="~/icons/settings.svg" />
+                        @Html.DisplayNameFor(model => model.Quality) : @Html.DisplayFor(model => model.Quality)
+                    </div>
+                </row>
+                <row>
+                    <div class="col mb-2">
+                        <img src="~/icons/calendar.svg" />
+                        @Html.DisplayNameFor(model => model.ReleaseDate) : @Html.DisplayFor(model => model.ReleaseDate)
+                    </div>
+                </row>
+                <row>
+                    <div class="col mb-2">
+                        <img src="~/icons/language.svg" />
+                        @Html.DisplayNameFor(model => model.Language) : @Html.DisplayFor(model => model.Language)
+                    </div>
+                </row>
+                <row>
+                    <div class="col mb-2">
+                        <img src="~/icons/globe.svg" />
+                        @Html.DisplayNameFor(model => model.Country) : @Html.DisplayFor(model => model.Country)
+                    </div>
+                </row>
+                <row>
+                    <div class="col mb-2">
+                        <img src="~/icons/group.svg" />
+                        Staff
+                        <div class="row">
+                            <div class="col">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Actors</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (string actorName in Model.Actors)
+                                        {
+                                            <tr>
+                                                <td>@actorName</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Directors</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (string directorName in Model.Directors)
+                                        {
+                                            <tr>
+                                                <td>@directorName</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </row>
+
+            </div>
+            <div class="row" align="center">
+                <form asp-action="AddLike">
+                    <input hidden name="mediaId" value="@Model.Id" />
+                    @if (Model.IsLike == null)
+                    {
+                        <button type="submit" name="islike" value="true" class="col btn btn-outline-success m-2">Like</button>
+                        <button type="submit" name="islike" value="false" class="col btn btn-outline-danger m-2">Dislike</button>
+                    }
+                    else
+                    {
+                        if (Model.IsLike == true)
+                        {
+                            <button type="submit" name="islike" value="false" class="col btn btn-outline-danger m-2">Dislike</button>
+                        }
+                        else
+                        {
+                            <button type="submit" name="islike" value="true" class="col btn btn-outline-success m-2">Like</button>
+                        }
+                    }
+                </form>
+
+            </div>
+        </div>
+        <div class="col-xl-6 col--sm-6 col-12 border border-2 rounded border-light">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <span class="badge bg-light rounded-pill text-dark w-100 border border-primary">@Html.DisplayNameFor(model => model.Description)</span>
+                        <div style="padding-left:5px; max-height:220px;overflow-y:auto">
+                            @Html.DisplayFor(model => model.Description)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 mt-3">
+
+            <div>
+                <div class="mb-3">
+                    <form aspmodel="CommentVM" asp-action="AddComment" asp-controller="media" class="border border-2 rounded border-light p-2">
+                        @if (TempData["CommentError"] != null)
+                        {
+                            <div class="text-danger">@TempData["CommentError"]</div>
+                        }
+                        <input hidden asp-for="CommentVM.MediaId" value="@Model.Id" />
+                        <label class="form-label">Title of comment</label>
+                        <input asp-for="CommentVM.Title" type="text" class="form-control rounded border-dark" placeholder="This work is great." />
+                        <label class="form-label mt-2">Comment</label>
+                        <textarea asp-for="CommentVM.Comment" placeholder="Write your comment about this work." class="form-control rounded border-dark" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <div class="text-center">
+                            <input class="btn btn-primary mt-2" type="submit" />
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            @if (Model.Comments?.Count() > 0)
+            {
+                <div class="border border-2 rounded border-light">
+
+                    <span class="badge bg-light rounded-pill text-dark w-100 border border-primary mb-1">Comments</span>
+                    <div class="p-2" style="max-height:450px; overflow-y:scroll ; overflow-x:clip">
+                        <div class="row">
+                            @foreach (CommentVM comment in Model.Comments)
+                            {
+
+                                <div class="card mb-1">
+                                    <div class="card-body">
+                                        <small>@comment.UserName</small>
+                                        <h4 class="card-title">@comment.Title</h4>
+                                        <p class="card-text">@comment.Comment</p>
+                                    </div>
+                                </div>
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            }
+          
+
+
+        </div>
+
+    </div>
+
+</div>
+<div class="mt-4">
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

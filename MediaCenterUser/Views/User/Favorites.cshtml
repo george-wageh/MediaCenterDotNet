@@ -1,0 +1,29 @@
+﻿@model ICollection<MediaCenterCore.ViewModels.MediaListVM>
+<style>
+    .MediaCard:hover {
+        box-shadow: 6px 10px 5px 3px #e6dbdb;
+    }
+
+    .MediaCard {
+        cursor: pointer
+    }
+</style>
+<div class="text-center">
+    <div>
+
+        <div class="row text-center justify-content-center">
+            @foreach (MediaListVM media in Model)
+            {
+                <div class="col-sm-6 col-lg-4 card text-dark border-2 m-2 p-2 MediaCard" style="max-width: 20rem;">
+                    @{
+                        await Html.RenderPartialAsync("_mediaListModel", media);
+                        <form asp-controller="User" asp-action="RemoveFav">
+                            <button name="mediaId" value="@media.Id" class="col btn btn-outline-danger m-2">Remove from favorites</button>
+                        </form>
+                    }
+                </div>
+            }
+        </div>
+
+    </div>
+</div>

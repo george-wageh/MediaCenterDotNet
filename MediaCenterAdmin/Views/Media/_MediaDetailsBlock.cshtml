@@ -1,0 +1,246 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model MediaCenterCore.ViewModels.MediaVM
+
+<div class="form-group mb-2">
+    <label asp-for="Name" class="control-label"></label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+
+</div>
+<div class="form-group mb-2">
+    <label asp-for="Quality" class="control-label"></label>
+    <select asp-for="Quality" class="form-select">
+        <option value="web-dl: 1080p">web-dl: 1080p</option>
+        <option value="web-dl: 750p">web-dl: 750p</option>
+        <option value="web-dl: 480p">web-dl: 480p</option>
+        <option value="cam: 1080p">cam: 1080p</option>
+        <option value="cam: 750p">cam: 750p</option>
+        <option value="cam: 480p">cam: 480p</option>
+    </select>
+    <span asp-validation-for="Quality" class="text-danger"></span>
+</div>
+<div class="form-group mb-2">
+    <label asp-for="Description" class="control-label"></label>
+    <textarea asp-for="Description" class="form-control"></textarea>
+    <span asp-validation-for="Description" class="text-danger"></span>
+</div>
+<div class="form-group mb-2">
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Actors</th>
+                        <th scope="col"></th>
+                    </tr>
+                    <tr>
+                        <td><input id="newActorValue" type="text" class="form-control" /></td>
+                        <td><button type="button" class="btn btn-primary" onclick="AddActor()">Add</button></td>
+                    </tr>
+                </thead>
+                <tbody id="ActorsTable">
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+
+        </div>
+        <script>
+            let ActorsList = []
+               
+            function AddActor() {
+                let newActorValueStr = document.getElementById("newActorValue").value
+                ActorsList.push(newActorValueStr)
+                ReloadActors()
+            }
+            function ReloadActors() {
+                let counter = 0
+                let table = document.getElementById("ActorsTable")
+                table.innerHTML = ""
+                for (let actor of ActorsList) {
+                    console.log(actor)
+                    let x = `
+                            <tr>
+                                <td>
+                                    ${actor}
+                                    <input type="hidden" name="Actors[${counter}]" value="${actor}">
+                                </td>
+                                <td><button type="button" class="btn btn-danger" onclick="DeleteActor('${actor}')" ">Delete</button></td>
+                            </tr>`;
+
+                    table.innerHTML += x
+                    counter += 1
+                }
+            }
+         
+            function DeleteActor(actorName) {
+                for (let i = 0; i < ActorsList.length; i++) {
+                    if (ActorsList[i] == actorName) {
+                        ActorsList.splice(i, 1);
+                        break;
+                    }
+                }
+                ReloadActors()
+            }
+        </script>
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Directors</th>
+                        <th scope="col"></th>
+                    </tr>
+                    <tr>
+                        <td><input id="newDirectorValue" type="text" class="form-control" /></td>
+                        <td><button type="button" class="btn btn-primary" onclick="AddDirector()">Add</button></td>
+                    </tr>
+                </thead>
+                <tbody id="DirectorsTable">
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+
+        </div>
+        <script>
+            let DirectorsList = []
+
+            function AddDirector() {
+                let newDirectorValueStr = document.getElementById("newDirectorValue").value
+                DirectorsList.push(newDirectorValueStr)
+                ReloadDirectors()
+            }
+            function ReloadDirectors() {
+                let counter = 0
+                let table = document.getElementById("DirectorsTable")
+                table.innerHTML = ""
+                for (let director of DirectorsList) {
+                    let x = `
+                            <tr>
+                                <td>
+                                    ${director}
+                                    <input type="hidden" name="Directors[${counter}]" value="${director}">
+                                </td>
+                                <td><button type="button" class="btn btn-danger" onclick="DeleteDirector('${director}')" ">Delete</button></td>
+                            </tr>`;
+
+                    table.innerHTML += x
+                    counter += 1
+                }
+            }
+          
+            function DeleteDirector(directorName) {
+                for (let i = 0; i < DirectorsList.length; i++) {
+                    if (DirectorsList[i] == directorName) {
+                        DirectorsList.splice(i, 1);
+                        break;
+                    }
+                }
+                ReloadDirectors()
+            }
+        </script>
+
+    </div>
+</div>
+<div class="form-group mb-2">
+    <label asp-for="Language" class="control-label"></label>
+    <input asp-for="Language" class="form-control" />
+    <span asp-validation-for="Language" class="text-danger"></span>
+</div>
+<div class="form-group mb-2">
+    <label asp-for="Country" class="control-label"></label>
+    <input asp-for="Country" class="form-control" />
+    <span asp-validation-for="Country" class="text-danger"></span>
+</div>
+<div class="form-group mt-2">
+    <label for="Categories" class="control-label">Categories</label>
+
+
+    <div class="row mb-2">
+
+        <div class="col-10">
+            <select id="selectOfCategory" class="form-select">
+                @foreach (var item in (IEnumerable<MediaCenterCore.ViewModels.CategoryVM>)(ViewData["Categories"] ?? new List<object>()))
+                {
+                    <option value="@item.Id">@item.Name</option>
+                }
+
+            </select>
+            <span asp-validation-for="Categories" class="text-danger"></span>
+        </div>
+        <div class="col-2">
+            <button type="button" onclick="addCategory()" class="btn btn-primary">Add</button>
+
+        </div>
+        <script>
+            let CategoriesList = []
+            function addCategory() {
+                let selectOfCategory = document.getElementById("selectOfCategory")
+                let id = selectOfCategory.value
+                let CategoryName = selectOfCategory[selectOfCategory.selectedIndex].text
+                for (let category of CategoriesList) {
+                    if (category.id == id) { 
+                        return;
+                    }
+                }
+                CategoriesList.push({ id, CategoryName })
+                reloadCategories()
+            }
+            function reloadCategories() {
+                let table = document.getElementById("CategoriesTable")
+                table.innerHTML = ""
+                let counter = 0;
+                for (let category of CategoriesList) {
+                    console.log(category)
+                    let id = category.id
+                    let CategoryName = category.CategoryName
+                    let x = `
+                            <tr>
+                                <td>
+                                    ${id}
+                                <input type="hidden" name="Categories[${counter}].Id" value="${id}">
+                                            <input type="hidden" name="Categories[${counter}].Name" value="${CategoryName}">
+            </td>
+                                <td>${CategoryName}</td>
+                                <td>
+                                    <button type="button" value="${id}" class="form-control btn btn-danger" onclick="deleteRow(${id})">Delete</button>
+                                </td>
+                            </tr>`;
+
+                    table.innerHTML += x
+                    counter += 1
+                }
+            }
+
+            function deleteRow(id) {
+                for (let i = 0; i < CategoriesList.length; i++) {
+                    if (CategoriesList[i].id == id) {
+                        CategoriesList.splice(i, 1);
+                        break;
+                    }
+                }
+                reloadCategories()
+            }
+        </script>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Name
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="CategoriesTable">
+        </tbody>
+    </table>
+    <span asp-validation-for="Country" class="text-danger"></span>
+</div>

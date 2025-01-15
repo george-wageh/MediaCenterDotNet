@@ -1,0 +1,82 @@
+﻿@model MediaCenterCore.ViewModels.ViewMediaVM
+
+@{
+    ViewData["Title"] = Model.Name;
+}
+<div class="mt-4">
+    <h4>@Model.Name</h4>
+    <hr />
+    <div class="row">
+        <div class="col-xl-3 col-sm-6 col-12 text-center">
+            <img style="width:250px" class="m-3" src="@Model.Image" />
+        </div>
+
+        <div class="col-xl-9 col--sm-6 col-12 border border-2 rounded border-light">
+            <div class="row justify-content-center">
+                <div class="col m-auto">
+                    <video controls>
+                        <source src="@Model.FileName">
+                    </video>
+                </div>
+                <div>
+                    Actors :  @foreach (string actorName in Model.Actors)
+                    {
+                        @(" / ") @actorName
+                    }
+                </div>
+                <div>
+                    Directors :  @foreach (string director in Model.Directors)
+                    {
+                        @(" / ") @director
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-12 mt-3">
+
+    
+            @if (Model.Comments?.Count() > 0)
+            {
+                <div class="border border-2 rounded border-light">
+
+                    <span class="badge bg-light rounded-pill text-dark w-100 border border-primary mb-1">Comments</span>
+                    <div class="p-2" style="max-height:450px; overflow-y:scroll ; overflow-x:clip">
+                        <div class="row">
+                            @foreach (CommentVM comment in Model.Comments)
+                            {
+
+                                <div class="card mb-1">
+                                    <div class="card-body">
+                                        <small>@comment.UserName</small>
+                                        <h4 class="card-title">@comment.Title</h4>
+                                        <p class="card-text">@comment.Comment</p>
+                                    </div>
+                                </div>
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+
+        </div>
+
+    </div>
+
+</div>
+<div class="mt-4">
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+@section scripts {
+    <script>
+        $('.removeMediaBtn').click(function () {
+            var id = $(this).val();
+            $('#mediaDetails').load('Remove?id=' + id, function () {
+                $('#mediaDetailsModel').modal('show');
+            });
+        });
+    </script>
+}

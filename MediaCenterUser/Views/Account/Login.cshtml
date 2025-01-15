@@ -1,0 +1,47 @@
+﻿@using MediaCenterCore.ViewModels;
+@model LoginVM;
+
+@{
+    ViewData["Title"] = "Log in to your account";
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="col-md-12 alert alert-danger">
+        <span><b>Sorry!</b> - @TempData["Error"] </span>
+    </div>
+}
+<div class="row justify-content-center">
+    <div class="col-12 col-lg-6">
+        <p>
+            <h4>Log in to your account</h4>
+        </p>
+        <form asp-action="Login">
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="EmailAddress" class="control-label"></label>
+                <input asp-for="EmailAddress" class="form-control" />
+                <span asp-validation-for="EmailAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="form-check">
+                <input asp-for="RememberMe" class="form-check-input" />
+                <label asp-for="RememberMe" class="form-check-label"></label>
+                <span asp-validation-for="RememberMe" class="text-danger"></span>
+            </div>
+
+            <div class="form-group text-center">
+                <input class="btn btn-outline-success float-right w-50" type="submit" value="Log in" />
+            </div>
+        </form>
+        <div class="mt-3">
+            <a class="link-primary" asp-action="register">Sign up :  create account</a>
+        </div>
+    </div>
+</div>

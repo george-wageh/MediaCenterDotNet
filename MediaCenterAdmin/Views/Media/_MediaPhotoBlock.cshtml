@@ -1,0 +1,52 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    string DefaultImage = MediaCenterCore.Shared.DomainsNames.HostStaticDomain + "/media-images/no-image.png";
+
+}
+@model MediaCenterCore.ViewModels.MediaVM
+
+<div class="form-group mb-2">
+    <label asp-for="Image" class="control-label w-auto"></label>
+    <div class="card border-secondary text-center">
+        <img id="previewImage" style="width:150px" class="m-3" src="@DefaultImage" />
+        <input hidden id="photoFlag" name="photoFlag" value="0" />
+        <input type="file" id="fileInput" asp-for="Photo" class="form-control-file" hidden>
+        <button type="button" id="upload_photo_btn" class="btn btn-outline-primary m-2">Upload</button>
+        <button type="button" id="remove_photo_btn" class="btn btn-outline-danger m-2" style="display:none">Remove</button>
+        <span asp-validation-for="Image" class="text-danger"></span>
+    </div>
+    <script>
+        var DefaultImage = "@DefaultImage";
+        document.getElementById('upload_photo_btn').addEventListener('click', function () {
+            document.getElementById('fileInput').click();
+        });
+
+        document.getElementById('fileInput').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            console.log(file)
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const previewImage = document.getElementById('previewImage');
+                    previewImage.src = e.target.result;
+                    document.getElementById('photoFlag').value = "1";
+                };
+                reader.readAsDataURL(file);
+                document.getElementById('remove_photo_btn').style.display = "inline-block"
+            }
+        });
+        document.getElementById('remove_photo_btn').addEventListener('click', function () {
+
+            var input = document.getElementById('fileInput');
+            input.value = ''
+            const previewImage = document.getElementById('previewImage');
+            previewImage.src = DefaultImage;
+            document.getElementById('remove_photo_btn').style.display = "none"
+            document.getElementById('photoFlag').value = "0";
+
+        });
+
+    </script>
+</div>

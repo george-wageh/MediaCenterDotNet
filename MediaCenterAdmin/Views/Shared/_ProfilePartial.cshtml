@@ -1,0 +1,17 @@
+﻿@model MediaCenterCore.ViewModels.ProfileVM
+
+<div class="modal-body">
+    @if (Model != null)
+    {
+        <h5>Full name: @Model.FullName</h5>
+        <h5>Email : @Model.Email</h5>
+        <h5>Phone : @Model.PhoneNumber</h5>
+        <h5>Role : Admin</h5>
+    }
+    <div class="text-center">
+        <form method="post">
+            <button asp-action="signout" asp-controller="account" type="submit" class="btn btn-danger" data-bs-dismiss="modal">Sign out</button>
+        </form>
+    </div>
+
+</div>
